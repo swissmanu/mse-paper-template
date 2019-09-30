@@ -1,4 +1,4 @@
-name: CI
+name: Build
 
 on: [push]
 
@@ -7,8 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: Build template
+      - name: Build LaTeX
         uses: xu-cheng/latex-action@master
         with:
-          root_file: paper.tex
-          working_directory: _template
+          root_file: index.tex
