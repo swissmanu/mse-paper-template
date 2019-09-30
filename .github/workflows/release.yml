@@ -1,7 +1,9 @@
 name: Release
 
 on:
-  push: [tags]
+  create:
+    tags:
+      - v*
 
 jobs:
   release:
